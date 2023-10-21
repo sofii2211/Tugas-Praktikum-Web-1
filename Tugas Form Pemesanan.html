@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Keychain</title>
+</head>
+<body>
+   <h1>Nanyang Store</h1>
+    <hr>
+    <form action="hasil-keychain.html">
+        <h2>Your Information</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td>: <input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td>: <input type="text" id="address"></td>
+            </tr>
+            <tr>
+                <td><label for="hp">No Handphone</label></td>
+                <td>: <input type="number" id="hp"></td>
+            </tr>
+        </tbody>  
+        </table>
+        <br>
+        <fieldset>
+            <legend><b>Choose Your Keychain</b></legend>
+            <h4>Member</h4>
+            <ul style="list-style-type: none;">
+                <li>
+                    <input type="checkbox" id="chenle_ver">
+                    <label for="chenle_ver">Chenle Ver</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="haechan_ver">
+                    <label for="haechan_ver">Haechan Ver</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="mark_ver">
+                    <label for="mark_ver">Mark Ver</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="renjun_ver">
+                    <label for="renjun_ver">Renjun Ver</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="jaemin_ver">
+                    <label for="jaemin_ver">Jaemin Ver</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="jeno_ver">
+                    <label for="jeno_ver">Jeno Ver</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="jisung_ver">
+                    <label for="jisung_ver">Jisung Ver</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="all_member_special_package_ver">
+                    <label for="all_member_special_package_ver">All Member Special Package Ver</label>
+                </li>
+            </ul>
+                <h4>Quantity Orders</h4>
+                <label for="count">Total Order : </label>
+                <input type="number" id="count">
+                <br>
+                <br>
+                <input type="submit" value="Reset">
+                <input type="submit" value="Order">
+        </fieldset>  
+    </form>
+</body>
+</html>
