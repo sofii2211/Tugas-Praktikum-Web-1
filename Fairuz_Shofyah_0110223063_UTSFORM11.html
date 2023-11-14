@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Pemeriksaan</title>
+</head>
+<body>
+    <fieldset>
+        <legend><h3><b>Booking Periksa Kesehatan Gigi</b></h3></legend>
+        <div>
+        <table>
+            <tr>
+                <td><label type="nama">Nama Pasien :</label></td>
+                <td><input type="text"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="dokter">Pilih Dokter :</label></td>
+                <td><select name="dokter">
+                    <option value="Drg. Amelia">Drg. Amelia</option>
+                    <option value="Drg. Echa">Drg. Echa</option>
+                    <option value="Drg. Mara">Drg. Mara</option>
+                </select></td> 
+            </tr>
+        
+            <tr>
+                <td><label for="layanan">Pilih Layanan :</label></td>
+                <td><select name="layanan">
+                    <option value="gigi">Perawatan Gigi Anak</option>
+                    <option value="gigi">Perawatan Gigi Dewasa</option>
+                </select></td>
+            </tr>
+            
+            <tr>
+                <td><label for="keluhan">Keluhan :</label></td>
+                <td><textarea  name="keluhan" id="keluhan" rows="5" cols="30"></textarea></td>
+            </tr>
+            
+            <tr>
+                <td><label for="pembayaran">Pembayaran :</label></td>
+                <td><input type="checkbox" name="Cash">Cash
+                <input type="checkbox" name="Transfer">Transfer
+                <input type="checkbox" name="eWallet">eWallet</td>
+            </tr>
+            
+            <tr>
+                <td><label for="tanggal">Tanggal Periksa :</label></td>
+                <td><input type="date"></td>
+            </tr>  
+            
+            <tr>
+                <td><label for="umur">Umur :</label></td>
+                <td><input type="number"></td>
+            </tr>   
+            
+            <tr>
+                <td><label for="telpon">Telpon/HP :</label></td>
+                <td><input type="number"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="email">Email :</label></td>
+                <td><input type="text"></td>
+            </tr>
+            
+            <tr>
+                <td>
+                <td><input type="reset">
+                <input type="submit"></td>
+                </td>
+            </tr>
+        </table>
+        </div>   
+    </fieldset>
+</body>
+</html>
