@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Validasi Pemesanan</h2>
+
+    <form id="ticketForm" onsubmit="validateForm(event)">
+        <label for="nama">Nama Pelanggan :</label>
+        <input type="text" id="nama" name="nama">
+        <span id="namaError" class="error"></span><br>
+
+        <br /> 
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span><br>
+        
+        <br /> 
+
+        <label for="jamKeberangkatan">Jam Keberangkatan :</label>
+        <input type="text" id="jamKeberangkatan" name="jamKeberangkatan">
+        <span id="jamKeberangkatanError" class="error"></span><br>
+        
+        <br /> 
+        
+        <label for="tujuanKeberangkatan">Tujuan Keberangkatan :</label>
+        <input type="text" id="tujuanKeberangkatan" name="tujuanKeberangkatan">
+        <span id="tujuanKeberangkatanError" class="error"></span><br>
+        
+        <br /> 
+
+        <label for="jumlahTiket">Jumlah Tiket :</label>
+        <input type="number" id="jumlahTiket" name="jumlahTiket">
+        <span id="jumlahTiketError" class="error"></span><br>
+
+        <br /> 
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let jamKeberangkatan = document.getElementById('jamKeberangkatan').value;
+            let tujuanKeberangkatan = document.getElementById('tujuanKeberangkatan').value;
+            let jumlahTiket = document.getElementById('jumlahTiket').value;
+
+            
+            document.getElementById('namaError').innerHTML = "";
+            document.getElementById('emailError').innerHTML = "";
+            document.getElementById('jamKeberangkatanError').innerHTML = "";
+            document.getElementById('tujuanKeberangkatanError').innerHTML = "";
+            document.getElementById('jumlahTiketError').innerHTML = "";
+
+
+            if (nama.trim() === "") {
+                document.getElementById('namaError').innerHTML = "Nama harus diisi";
+                return false;
+            }
+
+            if (email.trim() === "") {
+                document.getElementById('emailError').innerHTML = "Email harus diisi";
+                return false;
+            }
+
+            if (jamKeberangkatan.trim() === "") {
+                document.getElementById('jamKeberangkatanError').innerHTML = "Jam keberangkatan harus diisi";
+                return false;
+            }
+
+            if (tujuanKeberangkatan.trim() === "") {
+                document.getElementById('tujuanKeberangkatanError').innerHTML = "Tujuan keberangkatan harus diisi";
+                return false;
+            }
+
+            if (jumlahTiket.trim() === "" || isNaN(jumlahTiket) || parseInt(jumlahTiket) <= 0) {
+                document.getElementById('jumlahTiketError').innerHTML = "Jumlah tiket harus diisi dengan angka positif";
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+    
+        }
+    </script>
+
+</body>
+</html>
